@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                <li><a href="#videos" onclick="showSection('videos')">Videos</a></li>
+                <li><a href="#shorts" onclick="showSection('shorts')">Shorts</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        </nav>
+    </header>
+    <main id="mainContent">
+        <section id="home">
+            <h1>Welcome to My Personal Website</h1>
+            <p>This is the home section. My name is [Your Name]. Here you can introduce your site or provide a welcome message.</p>
+        </section>
+        <section id="about" style="display: none;">
+            <h1>About Me</h1>
+            <p>Hi, I'm [Your Name]. This section is about me. Provide details about yourself, your background, and your interests.</p>
+        </section>
+        <section id="services" style="display: none;">
+            <h1>Services</h1>
+            <p>Here are the services I offer. You can describe the different services or products you provide.</p>
+        </section>
+        <section id="videos" style="display: none;">
+            <h1>Videos</h1>
+            <div class="video">
+                <h2>Video Title 1</h2>
+                <video controls width="100%">
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Description of the video content.</p>
+            </div>
+            <div class="video">
+                <h2>Video Title 2</h2>
+                <video controls width="100%">
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Description of the video content.</p>
+            </div>
+            <!-- Example of embedding a YouTube video -->
+            <div class="video">
+                <h2>Embedded YouTube Video</h2>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Description of the YouTube video content.</p>
+            </div>
+        </section>
+        <section id="shorts" style="display: none;">
+            <h1>Shorts</h1>
+            <div class="short">
+                <h2>Short Title 1</h2>
+                <video controls width="100%">
+                    <source src="short1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Description of the short video content.</p>
+            </div>
+            <div class="short">
+                <h2>Short Title 2</h2>
+                <video controls width="100%">
+                    <source src="short2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Description of the short video content.</p>
+            </div>
+        </section>
+        <section id="contact" style="display: none;">
+            <h1>Contact Me</h1>
+            <p>This is the contact section. You can provide a form or contact details here.</p>
+            <form id="contactForm" aria-labelledby="contactFormTitle">
+                <h2 id="contactFormTitle">Contact Form</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Personal Website - Designed by [Your Name]</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

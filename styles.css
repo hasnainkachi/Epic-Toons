@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffff0; /* Ivory */
+    color: #2f4f4f; /* Dark Slate Gray */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: #ffd700; /* Gold */
+    color: #2f4f4f; /* Dark Slate Gray */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for sliding effect */
+}
+
+header.scrolled {
+    transform: translateY(-100%); /* Move header out of view */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #2f4f4f; /* Dark Slate Gray */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background: #b8860b; /* Dark Golden Rod */
+    border-radius: 4px;
+    color: #fff; /* White */
+}
+
+.dark-mode-toggle {
+    background: #ffd700; /* Gold */
+    border: none;
+    color: #2f4f4f; /* Dark Slate Gray */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background: #e0a800; /* Darker Gold */
+    transform: scale(1.05);
+}
+
+.dark-mode-toggle:focus {
+    outline: none;
+}
+
+main {
+    padding: 80px 20px 20px;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff; /* White */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer {
+    background: #ffd700; /* Gold */
+    color: #2f4f4f; /* Dark Slate Gray */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Light Gray */
+    border-radius: 4px;
+    background-color: #fff; /* White */
+    color: #2f4f4f; /* Dark Slate Gray */
+}
+
+.contact button {
+    background: #f08080; /* Light Coral */
+    color: #fff; /* White */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #e05d5d; /* Darker Light Coral */
+}
+
+.shorts .short {
+    background: #fff; /* White */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.shorts .short h2 {
+    margin-top: 0;
+}
+
+/* Dark Mode Styles */
+.dark-mode body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+.dark-mode header, .dark-mode footer {
+    background: #1f1f1f; /* Darker background */
+    color: #e0e0e0; /* Light text */
+}
+
+.dark-mode section {
+    background: #1b1b1b; /* Darker black-gray */
+}
+
+.dark-mode .contact input, .dark-mode .contact textarea {
+    border: 1px solid #444; /* Darker border */
+    background-color: #333; /* Darker background */
+    color: #e0e0e0; /* Light text */
+}
+
+.dark-mode .contact button {
+    background: #e05d5d; /* Darker Light Coral */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .dark-mode-toggle {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .contact form {
+        width: 90%;
+    }
+
+    .video, .short {
+        margin: 0;
+        padding: 10px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: #ffd700; /* Gold */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #2f4f4f; /* Dark Slate Gray */
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+}
